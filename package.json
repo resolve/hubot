@@ -20,7 +20,15 @@
     "scoped-http-client": "0.9.7",
     "log": "1.3.0",
     "connect": "2.3.4",
-    "connect_router": "1.8.6"
+    "connect_router": "1.8.6",
+    "underscore": "1.3.3",
+    "underscore.string": "2.3.0",
+    "moment": "1.7.0",
+    "aws2js": "0.7.4",
+    "clark": "0.0.5",
+    "date-utils": "1.2.11",
+    "githubot": "0.3.0",
+    "jsdom": "0.2.15"
   },
 
   "engines": {
