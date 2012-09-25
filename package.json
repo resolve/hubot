@@ -24,7 +24,7 @@
     "underscore": "1.3.3",
     "underscore.string": "2.3.0",
     "moment": "1.7.0",
-    "aws2js": "0.7.4",
+    "aws2js": "0.6.12",
     "clark": "0.0.5",
     "date-utils": "1.2.11",
     "githubot": "0.3.0",
