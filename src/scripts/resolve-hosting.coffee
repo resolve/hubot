@@ -19,15 +19,14 @@ module.exports = (robot) ->
       msg.send domain
 
 resolveHosting = (msg, domain, cb) ->
-	dns = require('dns')
-	dns.resolve domain, (err, addr, ttl, cname) ->
-		if err == null
-		  msg.http("http://#{addr}/").get() (err, res, body) ->
-		  	if res.statusCode == 200
-			  	server = body.match(/<title>(.+?)<\/title>/)[1]
-		  		cb "#{domain} is hosted with Engine Yard on the #{server}"
-		  	else
-		  		cb "#{domain} is hosted with Heroku"
-	  else
-	  	cb "#{domain} is invalid."
-
+  dns = require('dns')
+  dns.resolve domain, (err, addr, ttl, cname) ->
+    if err == null
+      msg.http("http://#{addr}/").get() (err, res, body) ->
+        if res.statusCode == 200
+          server = body.match(/<title>(.+?)<\/title>/)[1]
+          cb "#{domain} is hosted with Engine Yard on the #{server}"
+        else
+          cb "#{domain} is hosted with Heroku"
+    else
+      cb "#{domain} is invalid."
