@@ -29,5 +29,5 @@ resolveHosting = (msg, domain, cb) ->
 		  	else
 		  		cb "#{domain} is hosted with Heroku"
 	  else
-	  	cb "#{domain} is not a valid domain"
+	  	cb "#{domain} is invalid."
 
